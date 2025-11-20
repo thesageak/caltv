@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1558.26 429.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #383838;
+      }
+    </style>
+  </defs>
+  <g id="primary">
+    <polygon points="0 0 0 329.14 1558.26 399.3 1558.26 .25 0 0"/>
+  </g>
+  <g id="secondary">
+    <polygon class="cls-1" points="0 329.14 1558.26 429.37 1558.26 399.3 0 329.14"/>
+  </g>
+</svg>
