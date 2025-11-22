@@ -5,7 +5,8 @@ export default function News() {
             <SectionLayout
                 title="News"
                 primaryColor="text-red-500"
-                secondaryColor='text-red-300'
+                secondaryColor="text-red-300"
+                navbarColor="bg-red-500"
             />
         </div>
     )

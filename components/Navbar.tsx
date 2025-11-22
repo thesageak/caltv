@@ -3,7 +3,13 @@
 import { useEffect, useState } from 'react';
 import calTVLogo from '@/public/CalTVLogoBlack.png'
 
-export default function Navbar() {
+interface NavbarProps {
+    barColor?: string;
+    textColor?: string;
+    currentPage?: string;
+}
+
+export default function Navbar({barColor, textColor, currentPage} : NavbarProps) {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -17,9 +23,9 @@ export default function Navbar() {
 
     return (
         <div className="sticky z-50 top-0 bg-white drop-shadow-sm/6">
-            <nav className="flex flex-row items-center w-full h-9 bg-darkGrey">
+            <nav className={`flex flex-row items-center w-full h-9 ${barColor}`}>
                 <div className="flex justify-end md:w-[1100px] mx-auto gap-5 text-white">
-                    <a href="#">About CalTV</a>
+                    <a href="/section/about">About CalTV</a>
                     <a href="#">Join Our Team</a>
                     <a href="#">Get Featured</a>
                     <a href="#">Contact</a>
@@ -33,9 +39,9 @@ export default function Navbar() {
                             className={`transition-all duration-350 ${scrolled ? "h-11" : "h-17"}`}
                         />
                     </a>
-                    <div className="flex items-center gap-5 ml-auto text-black text-[1.6rem]">
-                        <a href="/section/news">News</a>
-                        <a href="/section/entertainment">Entertainment</a>
+                    <div className={`flex items-center gap-5 ml-auto text-[1.6rem]`}>
+                        <a href="/section/news" className={currentPage === "news" ? textColor : "text-black"}>News</a>
+                        <a href="/section/entertainment" className={currentPage === "entertainment" ? textColor : "text-black"}>Entertainment</a>
                         <a href="#">Studios</a>
                         <p>search</p>
                     </div>

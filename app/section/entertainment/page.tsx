@@ -7,6 +7,7 @@ export default function Entertainment() {
                 title="Entertainment"
                 primaryColor="text-teal-500"
                 secondaryColor='text-teal-300'
+                navbarColor="bg-teal-500"
             />
         </div>
     )

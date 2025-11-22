@@ -1,4 +1,4 @@
-import colorBarAsset from '@/public/ColorBarAssest.svg'
+import colorBarAsset from '@/public/ColorBarAsset.svg'
 import colorWave from '@/public/BottomSmallerWave.svg'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <div className="w-full flex flex-col">
-      <Navbar />
+      <Navbar barColor="bg-darkGrey"/>
       <div className="w-full flex flex-col">
         <div className="w-full">
           <img
