@@ -11,13 +11,13 @@ export default function Home() {
         <div className="w-full">
           <img
             src={colorBarAsset.src}
-            className="w-full h-8 object-cover"
+            className="w-full h-6 object-cover"
           />
         </div>
         <div className="relative w-full">
           {/*------Gradient Block Background-------*/}
-          <div className="absolute inset-0 top-0 w-full h-30 bg-linear-to-b from-black/95 to-darkGrey"/>
-          <div className="absolute inset-0 top-29.5 w-full h-50 bg-darkGrey"/>
+          <div className="absolute inset-0 top-0 w-full h-25 bg-linear-to-b from-black/95 to-darkGrey"/>
+          <div className="absolute inset-0 top-24.5 w-full h-50 bg-darkGrey"/>
 
           {/*-------- Main Content --------*/}
           <div className="flex flex-col md:w-[1100px] mx-auto min-h-screen absolute inset-0 top-15">

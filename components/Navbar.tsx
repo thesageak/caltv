@@ -16,8 +16,8 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className="sticky z-50 top-0 bg-white drop-shadow-sm">
-            <nav className="flex flex-row items-center w-full h-10 bg-darkGrey">
+        <div className="sticky z-50 top-0 bg-white drop-shadow-sm/6">
+            <nav className="flex flex-row items-center w-full h-9 bg-darkGrey">
                 <div className="flex justify-end md:w-[1100px] mx-auto gap-5 text-white">
                     <a href="#">About CalTV</a>
                     <a href="#">Join Our Team</a>
@@ -30,7 +30,7 @@ export default function Navbar() {
                     <a href="/">
                         <img
                             src={calTVLogo.src}
-                            className={`transition-all duration-350 ${scrolled ? "h-12" : "h-17"}`}
+                            className={`transition-all duration-350 ${scrolled ? "h-11" : "h-17"}`}
                         />
                     </a>
                     <div className="flex items-center gap-5 ml-auto text-black text-[1.6rem]">
