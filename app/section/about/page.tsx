@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import colorBarAsset from "@/public/ColorBarAsset.svg"
 import asucLogo from '@/public/ASUCLogoWhite.png'
+import LeadershipCards from "@/components/LeadershipCards"
+import { leadershipData } from "@/app/section/about/data"
 
 
 export default function About() {
@@ -37,7 +39,7 @@ export default function About() {
                 src={colorBarAsset.src}
                 className="w-full h-6 object-cover"
             />
-            <div className="w-full h-130 flex justify-center bg-black mb-20">
+            <div className="w-full h-140 flex justify-center bg-black mb-20">
                 <div className="w-[1100px] grid grid-cols-3 grid-rows-2 place-items-center mt-10 mb-10">
                     <div className="flex flex-col items-center">
                         <img
@@ -96,6 +98,21 @@ export default function About() {
                 </div>
             </div>
 
+            <h1 className="text-center text-4xl font-bold mb-20">Leadership Team</h1>
+            <div className="flex flex-wrap justify-center gap-10">
+
+                {
+                    leadershipData.map((leader, index) => (
+                        <LeadershipCards
+                            key={index}
+                            name={leader.name} 
+                            title={leader.title} 
+                            image={leader.image} 
+                            pronouns={leader.pronouns} 
+                        />
+                    ))
+                }
+            </div>
             <Footer />
         </div>
     )
