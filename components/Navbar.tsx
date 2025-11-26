@@ -26,7 +26,7 @@ export default function Navbar({barColor, textColor, currentPage} : NavbarProps)
             <nav className={`flex flex-row items-center w-full h-9 ${barColor}`}>
                 <div className="flex justify-end md:w-[1100px] mx-auto gap-5 text-white">
                     <a href="/section/about">About CalTV</a>
-                    <a href="#">Join Our Team</a>
+                    <a href="/section/join">Join Our Team</a>
                     <a href="/section/feature">Get Featured</a>
                     <a href="/section/contact">Contact</a>
                 </div>
