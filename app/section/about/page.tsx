@@ -7,7 +7,6 @@ import { leadershipData } from "@/app/section/about/data"
 
 
 export default function About() {
-    const text= ""
     return (
         <div>
             <Navbar barColor="bg-darkGrey"/>
@@ -98,9 +97,11 @@ export default function About() {
                 </div>
             </div>
 
-            <h1 className="text-center text-4xl font-bold mb-20">Leadership Team</h1>
-            <div className="flex flex-wrap justify-center gap-10">
+            <h1 className="text-center text-4xl font-bold mb-20">
+                Leadership Team
+            </h1>
 
+            <div className="flex flex-wrap justify-center gap-10">
                 {
                     leadershipData.map((leader, index) => (
                         <LeadershipCards
