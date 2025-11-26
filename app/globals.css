@@ -6,7 +6,8 @@
 }
 
 @theme {
-  --color-darkGrey: #212121
+  --color-darkGrey: #212121;
+  --color-lightGrey: #7c7b7a;
 }
 
 @theme inline {
