@@ -12,7 +12,7 @@ export default function Contact() {
                         Contact Us.
                     </h1>
                     <p className="font-bold mb-10">
-                        Reach out to us through this form for general inquiries.
+                        Reach out to us through this form for general inqfuiries.
                         For collaboration or feature requests, please use the Get Featured form.
                     </p>
                     <p className="font-bold">

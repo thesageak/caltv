@@ -1,9 +1,11 @@
 'use client';
 
-import { easeInOut, motion, useScroll, useSpring, useTransform } from 'framer-motion'
-import { useEffect } from 'react';
+import { motion, useScroll, useSpring, useTransform, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react';
+import TextReveal from '@/components/TextReveal';
 import mountain from '../../../public/peak_mountain.png'
 import calTVCircle from '@/public/CalTVLogoBlackCircle.png'
+import officeImage from '@/public/office_cover.jpg'
 
 export default function Join() {
     const { scrollY } = useScroll();
@@ -11,6 +13,16 @@ export default function Join() {
     const backY = useSpring(rawBackY, { stiffness: 35, damping: 20 });
     const rawMiddleY = useTransform(scrollY, [0, 500], [0, 100]);
     const middleY = useSpring(rawMiddleY, { stiffness: 50, damping: 25 });
+
+    const texts = ["MARKETING", "ANALYTICS", "PRODUCTION", "EDITING", ""]
+    const [index, setIndex] = useState(0);
+    const [showLogo, setShowLogo] = useState(false);
+
+    useEffect(() => {
+        if (index === texts.length - 1) return;
+        const interval = setInterval(() => setIndex((prevIndex) => (prevIndex + 1) % texts.length), 4000);
+            return () => clearInterval(interval);
+        }, [index]);
 
     return (
         <div>
@@ -58,8 +70,8 @@ export default function Join() {
                 <motion.img
                     src={calTVCircle.src}
                     className="w-60 h-auto object-cover mt-10 ml-15"
-                    initial={{ clipPath: "circle(0% at 50% 50%)" }}   // start fully hidden
-                    animate={{ clipPath: "circle(100% at 50% 50%)" }}   // reveal to half radius (adjust as needed)
+                    initial={{ clipPath: "circle(0% at 50% 50%)" }}  
+                    animate={{ clipPath: "circle(100% at 50% 50%)" }}  
                     transition={{ ease: "easeIn", duration: 0.25, delay: 0.5 }}
                 />
 
@@ -95,7 +107,49 @@ export default function Join() {
 
             </div>
 
-            <div className="h-300" bg-white />
+            {/* <div className="h-100" bg-white /> */}
+
+
+            <div className="relative flex justify-center items-center">
+                <img 
+                    src={officeImage.src} 
+                    alt="Office Cover" 
+                    className="w-full h-80 object-cover" 
+                />
+                <div className="absolute flex justify-center items-center gap-4 translate-x-10">
+                    <p 
+                        className="text-white text-[4rem] font-extrabold"
+                    >
+                        WE LOVE
+                    </p>
+                    <div className="w-[30vw]">
+                        <AnimatePresence 
+                            mode="wait"
+                            onExitComplete ={() => {if (index === texts.length - 1) setShowLogo(true);}}
+                        >
+                            <TextReveal 
+                                key={texts[index]}
+                                text={texts[index]}
+                                className="text-orange-500 text-[4rem] font-extrabold"
+                            />
+                        </AnimatePresence>
+                        { 
+                            showLogo && (
+                            <motion.img
+                                src={calTVCircle.src}
+                                initial={{ opacity: 0}}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.5 }}
+                                className="w-60 h-auto"
+                            />
+                        )}
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div className="h-100" bg-white />
 
         </div>
     )
