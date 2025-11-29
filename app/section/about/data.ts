@@ -2,13 +2,13 @@ export const leadershipData = [
     {
         name: "Spencer Douangphouxay",
         title: "Executive President",
-        image: "/SpencerDouangphouxay.jpeg",
+        image: "/portraits/SpencerDouangphouxay.jpeg",
         pronouns: "He/Him",
     },
     {
         name: "Citlali Gonzalez",
         title: "Executive President",
-        image: "/CitlaliGonzalez.jpg",
+        image: "/portraits/CitlaliGonzalez.jpg",
         pronouns: "She/They",
     },
 ];

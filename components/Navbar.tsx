@@ -32,23 +32,24 @@ export default function Navbar({barColor, textColor, currentPage, hideBottom} : 
                     <a href="/section/contact">Contact</a>
                 </div>
             </nav>
-            { !hideBottom &&
-                <div className="md:max-w-[1100px] mx-auto">
-                    <nav className={`flex flex-row items-center duration-350 ${scrolled ? "h-18" : "h-25"}`}>
-                        <a href="/">
-                            <img
-                                src={calTVLogo.src}
-                                className={`transition-all duration-350 ${scrolled ? "h-11" : "h-17"}`}
-                            />
-                        </a>
-                        <div className={`flex items-center gap-5 ml-auto text-[1.6rem]`}>
-                            <a href="/section/news" className={currentPage === "news" ? textColor : "text-black"}>News</a>
-                            <a href="/section/entertainment" className={currentPage === "entertainment" ? textColor : "text-black"}>Entertainment</a>
-                            <a href="#">Studios</a>
-                            <p>search</p>
-                        </div>
-                    </nav>
-                </div>
+            { 
+                !hideBottom &&
+                    <div className="md:max-w-[1100px] mx-auto">
+                        <nav className={`flex flex-row items-center duration-350 ${scrolled ? "h-18" : "h-25"}`}>
+                            <a href="/">
+                                <img
+                                    src={calTVLogo.src}
+                                    className={`transition-all duration-350 ${scrolled ? "h-11" : "h-17"}`}
+                                />
+                            </a>
+                            <div className={`flex items-center gap-5 ml-auto text-[1.6rem]`}>
+                                <a href="/section/news" className={currentPage === "news" ? textColor : "text-black"}>News</a>
+                                <a href="/section/entertainment" className={currentPage === "entertainment" ? textColor : "text-black"}>Entertainment</a>
+                                <a href="#">Studios</a>
+                                <p>search</p>
+                            </div>
+                        </nav>
+                    </div>
             }
         </div>
     )

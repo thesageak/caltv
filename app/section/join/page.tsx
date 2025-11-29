@@ -121,7 +121,7 @@ export default function Join() {
 
             <div className="h-20 bg-gray-400" />
 
-            {/* Info Session */}
+            {/* ------- Info Sesssion Section ----------- */}
            <div id="info-session" className="relative w-full h-[500px] overflow-hidden">
                 <motion.img 
                     src={colorBackAsset.src}
