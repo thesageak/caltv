@@ -1,9 +1,10 @@
 'use client';
 
 import { motion, useScroll, useSpring, useTransform, AnimatePresence } from 'framer-motion'
-import { useState, useEffect } from 'react';
-import Footer from '@/components/Footer';
-import TextReveal from '@/components/TextReveal';
+import { useState, useEffect } from 'react'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import TextReveal from '@/components/TextReveal'
 import mountain from '../../../public/peak_mountain.png'
 import calTVCircle from '@/public/CalTVLogoBlackCircle.png'
 import officeImage from '@/public/office_cover.jpg'
@@ -33,6 +34,7 @@ export default function Join() {
 
     return (
         <div>
+            <Navbar hideBottom={true} barColor='bg-darkGrey' />
             {/*-------------- Top Mountain Section --------------*/}
             <div className="relative w-full h-245 bg-lightGrey overflow-hidden">
                 <motion.div
