@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_6" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 288">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fdb414;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #1aa699;
+      }
+
+      .cls-4 {
+        fill: #164688;
+      }
+
+      .cls-5 {
+        fill: #cd2027;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" width="1024" height="288"/>
+    </clipPath>
+  </defs>
+  <g class="cls-6">
+    <polygon class="cls-3" points="382.67 -71.75 382.67 453.97 1272.96 439.11 1156.38 -123.17 382.67 -71.75"/>
+    <path class="cls-4" d="M652.77,0s-68.38,139.37,153.9,144c97.14,6.35,175.23,19.49,217.33,57.78s100.96,28,100.96,28l-49.14-273.14-415.43,20.57-7.62,22.79Z"/>
+    <path class="cls-1" d="M538.64,0s-295.62,58.12-48.38,288S0,356.36,0,356.36L149.31,7.41l108.19-85.33L538.64,0Z"/>
+    <path class="cls-5" d="M277.14,0s-23.24,93.57-106.29,147.29-76.95,150.1-76.95,150.1l-112.76-2.67L-6.29-38.62,277.14-11.57V0Z"/>
+  </g>
+</svg>
