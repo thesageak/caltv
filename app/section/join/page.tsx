@@ -98,7 +98,7 @@ export default function Join() {
                     <h1 className="text-white text-[4.5rem] font-extrabold leading-15 mb-7">
                         REACH NEW <br /> HEIGHTS <br /> WITH <br /> US.
                     </h1>
-                    <a href="#info-session" className="scroll-smooth text-white text-[1.2rem] transition-transform hover:translate-x-5 duration-500">
+                    <a href="#info-session" className="z-50 scroll-smooth text-white text-[1.2rem] transition-transform hover:translate-x-5 duration-500">
                         LEARN MORE
                     </a>
                 </motion.div>
@@ -124,7 +124,9 @@ export default function Join() {
                 className="relative flex w-full gap-20 justify-center items-center h-[600px] mt-40 bg-[url(/ColorBackAsset.svg)] bg-cover bg-center bg-no-repeat bg-fixed"
             >
                 <div className="flex-col -translate-y-16">
-                    <h1 className="text-[2rem] font-bold text-white mb-8">Fall 2025 Applications open soon!</h1>
+                    <h1 className="text-[2rem] font-bold text-white mb-8">
+                        Fall 2025 Applications open soon!
+                    </h1>
                     <p className="w-150 text-white font-bold mb-2">
                         Applications are due Friday, September 5th (11:59pm PT)
                         Interviews will be held by Department Directors from September 7th-9th.
@@ -179,7 +181,7 @@ export default function Join() {
                         Fostering creativity for over a decade
                     </h1>
                     <p className="font-bold text-[1.1rem] w-180">
-                        For 18 years, CalTV has helped students grow their creativity and bring their ideas to life. 
+                        For over 18 years, CalTV has helped students grow their creativity and bring their ideas to life. 
                         Our alumni have gone on to work in Marketing, Entertainment, Tech, among many other industries, 
                         in organizations like Airbnb, Paramount Networks, Nickelodeon, Yelp, The White House, Google, Uber, 
                         PwC, TikTok, and more.
@@ -202,11 +204,14 @@ export default function Join() {
                         className="w-full h-80 object-cover"
                     />
                     <div className="absolute flex justify-center items-center gap-4 translate-x-10">
-                        <p
+                        <motion.p
                             className="text-white text-[4rem] font-extrabold"
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.3 }}
                         >
                             WE LOVE
-                        </p>
+                        </motion.p>
                         <div className="w-[30vw]">
                             <AnimatePresence
                                 mode="wait"
@@ -243,7 +248,7 @@ export default function Join() {
             <div className="flex w-full h-60 mx-auto gap-20 justify-center items-center">
                 <h1 className="font-bold text-[1.7rem]">
                     A home for everyone
-                    </h1>
+                </h1>
                 <p className="w-180 font-bold text-[1.1rem]">
                     At CalTV, there’s a role for every interest. Whether you are interested in Journalism, 
                     Video Production, Marketing, Social Media, or analytics, we have a place for you.
