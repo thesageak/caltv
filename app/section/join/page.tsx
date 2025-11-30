@@ -4,12 +4,14 @@ import { motion, useScroll, useSpring, useTransform, AnimatePresence } from 'fra
 import { useState, useEffect } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Carousel from '@/components/Carousel'
 import TextReveal from '@/components/TextReveal'
 import mountain from '../../../public/peak_mountain.png'
 import calTVCircle from '@/public/CalTVLogoBlackCircle.png'
 import officeImage from '@/public/office_cover.jpg'
 import colorBarAsset from '@/public/ColorBarAsset.svg'
 import colorBackAsset from '@/public/ColorBackAsset.svg'
+import { companyData } from './data';
 
 export default function Join() {
     const { scrollY } = useScroll();
@@ -29,8 +31,8 @@ export default function Join() {
         return () => clearInterval(interval);
     }, [index]);
 
-    const rawInfoY = useTransform(scrollY, [0,1000], [-100,100]);
-    const infoY = useSpring(rawInfoY, {stiffness:20, damping: 50});
+    const rawInfoY = useTransform(scrollY, [0, 1000], [-100, 100]);
+    const infoY = useSpring(rawInfoY, { stiffness: 20, damping: 50 });
 
     return (
         <div>
@@ -119,15 +121,34 @@ export default function Join() {
 
             </div>
 
-            <div className="h-20 bg-gray-400" />
-
-            {/* ------- Info Sesssion Section ----------- */}
-           <div id="info-session" className="relative w-full h-[500px] overflow-hidden">
-                <motion.img 
+            {/* ------- Info Sesssion Section ------- */}
+            <div id="info-session" className="relative w-full h-[500px] overflow-hidden mt-40">
+                <motion.img
                     src={colorBackAsset.src}
                     className="absolute w-full h-[895px] object-cover object-[40%_50%] -translate-y-[15%]"
-                    style={{y: infoY}}
+                    style={{ y: infoY }}
                 />
+            </div>
+
+            {/* ------- Companies Section ------- */}
+            <div className="flex flex-col w-full h-120 justify-center items-center mx-auto overflow-hidden">
+                <div className="flex mb-20">
+                    <h1 className="text-[2rem] font-bold w-100">
+                        Fostering creativity for over a decade
+                    </h1>
+                    <p className="font-bold w-180">
+                        For 18 years, CalTV has helped students grow their creativity and bring their ideas to life. 
+                        Our alumni have gone on to work in Marketing, Entertainment, Tech, among many other industries, 
+                        in organizations like Airbnb, Paramount Networks, Nickelodeon, Yelp, The White House, Google, Uber, 
+                        PwC, TikTok, and more.
+                    </p>
+               </div>
+
+                <div className="flex justify-center">
+                    <Carousel interval={3000} speed={500}>
+                        {companyData.map((src, i) => ( <img key={i} src={src} className="w-auto h-10"/>))}
+                    </Carousel>
+                </div>
             </div>
 
             <div className="h-20 bg-gray-400" bg-white />
@@ -157,6 +178,7 @@ export default function Join() {
                                     className="text-orange-500 text-[4rem] font-extrabold"
                                 />
                             </AnimatePresence>
+
                             {
                                 showLogo && (
                                     <motion.img

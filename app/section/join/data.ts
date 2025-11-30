@@ -1,0 +1,17 @@
+export const companyData = [
+    "/companies/Airbnb.png",
+    "/companies/Fox-2.png",
+    "/companies/CNET.png",
+    "/companies/NBC-Sports-Bay-Area.png",
+    "/companies/Allied.png",
+    "/companies/BuzzFeed.png",
+    "/companies/ABC7.png",
+    "/companies/Amazon.png",
+    "/companies/Google.png",
+    "/companies/TikTok.png",
+    "/companies/Yelp.png",
+    "/companies/The-White-House.png",
+    "/companies/Nickelodeon.png",
+    "/companies/Uber.png",
+    "/companies/PWC.png",
+]
