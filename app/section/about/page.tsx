@@ -101,7 +101,7 @@ export default function About() {
                 Leadership Team
             </h1>
 
-            <div className="flex flex-wrap justify-center gap-10">
+            <div className="w-[1100px] mx-auto flex flex-wrap justify-center gap-10">
                 {
                     leadershipData.map((leader, index) => (
                         <LeadershipCards

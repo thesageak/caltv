@@ -10,10 +10,12 @@ interface LeadershipCardProps {
 export default function LeadershipCards({name, title, image, pronouns} : LeadershipCardProps) {
     return (
         <div className="relative w-[491px] h-[292px] flex flex-col items-center group">
-            <img
-                src={image}
-                className=" w-40 h-40 rounded-full overflow-hidden mb-7 group-hover:scale-110 transition-transform ease-in-out duration-1000"
-            />
+            <div className="w-40 h-40">
+                 <img
+                    src={image}
+                    className="w-full h-full rounded-full object-cover overflow-hidden mb-7 group-hover:scale-110 transition-transform ease-in-out duration-1000"
+                />
+            </div>
 
             <div className="
                 absolute bottom-0

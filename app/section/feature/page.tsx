@@ -25,7 +25,7 @@ export default function Feature() {
                     <div className="flex flex-col">
                         <label>Organization</label>
                         <input type="text" id="organization" name="organization" className=" w-[21vw] p-2 rounded text-white border-2 border-gray-300" />
-                        <label htmlFor="organization">if applicable, state your affiliated organization</label>
+                        <label htmlFor="organization">If applicable, state your affiliated organization</label>
                     </div>
 
                     <div className="flex flex-col">

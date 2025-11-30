@@ -98,7 +98,7 @@ export default function Join() {
                     <h1 className="text-white text-[4.5rem] font-extrabold leading-15 mb-7">
                         REACH NEW <br /> HEIGHTS <br /> WITH <br /> US.
                     </h1>
-                    <a href="#info-session" className="scroll-smooth text-white text-[1.2rem]">
+                    <a href="#info-session" className="scroll-smooth text-white text-[1.2rem] transition-transform hover:translate-x-5 duration-500">
                         LEARN MORE
                     </a>
                 </motion.div>
