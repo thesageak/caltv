@@ -122,12 +122,53 @@ export default function Join() {
             </div>
 
             {/* ------- Info Sesssion Section ------- */}
-            <div id="info-session" className="relative w-full h-[500px] overflow-hidden mt-40">
-                <motion.img
-                    src={colorBackAsset.src}
-                    className="absolute w-full h-[895px] object-cover object-[40%_50%] -translate-y-[15%]"
-                    style={{ y: infoY }}
-                />
+            <div 
+                id="info-session" 
+                className="relative flex w-full gap-20 justify-center items-center h-[600px] mt-40 bg-[url(/ColorBackAsset.svg)] bg-cover bg-center bg-no-repeat bg-fixed"
+            >
+                <div className="flex-col -translate-y-16">
+                    <h1 className="text-[2rem] font-bold text-white mb-8">Fall 2025 Applications open soon!</h1>
+                    <p className="w-150 text-white font-bold mb-2">
+                        Applications are due Friday, September 5th (11:59pm PT)
+                        Interviews will be held by Department Directors from September 7th-9th.
+                        Decisions will be announced by Wednesday, September 10th.
+                    </p>
+                    <button className="text-[1.5rem] font-bold mt-5 px-7 py-5 text-orange-600 bg-white">
+                        Apply Now!
+                    </button>
+                </div>
+                <div className="text-white">
+                    <h1 className="font-bold text-[2rem] mb-4">
+                        Want to learn more?
+                    </h1>
+                    <div className="felx-col w-110 h-30 bg-white/15 p-5 text-[1.2rem] font-bold mb-1">
+                        <div>
+                            <div className="flex justify-between">
+                            <p>In-Person Tabling:</p>
+                            <p>Sather Gate</p>
+                        </div>
+                            <p>September 2nd - 5th</p>
+                        </div>
+                    </div>
+                    <div className="felx-col w-110 h-25 bg-white/15 p-5 py-10 text-[1.2rem] font-bold mb-1">
+                        <div className="-translate-y-5">
+                            <div className="flex justify-between">
+                            <p>In-Person Tabling:</p>
+                            <p>Sather Gate</p>
+                        </div>
+                            <p>September 2nd - 5th</p>
+                        </div>
+                    </div>
+                    <div className="felx-col w-110 h-25 bg-white/15 p-5 py-10 text-[1.2rem] font-bold">
+                        <div className="-translate-y-5">
+                            <div className="flex justify-between">
+                            <p>In-Person Tabling:</p>
+                            <p>Sather Gate</p>
+                        </div>
+                            <p>September 2nd - 5th</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* ------- Companies Section ------- */}
@@ -150,8 +191,6 @@ export default function Join() {
                     </Carousel>
                 </div>
             </div>
-
-            <div className="h-20 bg-gray-400" bg-white />
 
             {/*-------------- Banner Section --------------*/}
             <div className="flex flex-col">
