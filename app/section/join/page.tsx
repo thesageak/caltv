@@ -31,9 +31,6 @@ export default function Join() {
         return () => clearInterval(interval);
     }, [index]);
 
-    const rawInfoY = useTransform(scrollY, [0, 1000], [-100, 100]);
-    const infoY = useSpring(rawInfoY, { stiffness: 20, damping: 50 });
-
     return (
         <div>
             <Navbar hideBottom={true} barColor='bg-darkGrey' />
@@ -153,31 +150,35 @@ export default function Join() {
                     <div className="felx-col w-110 h-25 bg-white/15 p-5 py-10 text-[1.2rem] font-bold mb-1">
                         <div className="-translate-y-5">
                             <div className="flex justify-between">
-                            <p>In-Person Tabling:</p>
-                            <p>Sather Gate</p>
+                            <p>Info Session #1:</p>
+                            <p>Social Science 175</p>
                         </div>
-                            <p>September 2nd - 5th</p>
+                            <p>
+                                Tuesday, September 2nd (8-9:00pm PT)
+                            </p>
                         </div>
                     </div>
                     <div className="felx-col w-110 h-25 bg-white/15 p-5 py-10 text-[1.2rem] font-bold">
                         <div className="-translate-y-5">
                             <div className="flex justify-between">
-                            <p>In-Person Tabling:</p>
-                            <p>Sather Gate</p>
+                            <p>Info Session #2:</p>
+                            <p>SS 175, Zoom</p>
                         </div>
-                            <p>September 2nd - 5th</p>
+                            <p>
+                                Thursday, September 4th (8-9:00 pm PT)
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* ------- Companies Section ------- */}
-            <div className="flex flex-col w-full h-120 justify-center items-center mx-auto overflow-hidden">
-                <div className="flex mb-20">
-                    <h1 className="text-[2rem] font-bold w-100">
+            <div className="flex flex-col w-full h-100 justify-center items-center mx-auto overflow-hidden">
+                <div className="flex gap-20 mb-20">
+                    <h1 className="text-[1.7rem] w-65 font-bold">
                         Fostering creativity for over a decade
                     </h1>
-                    <p className="font-bold w-180">
+                    <p className="font-bold text-[1.1rem] w-180">
                         For 18 years, CalTV has helped students grow their creativity and bring their ideas to life. 
                         Our alumni have gone on to work in Marketing, Entertainment, Tech, among many other industries, 
                         in organizations like Airbnb, Paramount Networks, Nickelodeon, Yelp, The White House, Google, Uber, 
@@ -186,7 +187,7 @@ export default function Join() {
                </div>
 
                 <div className="flex justify-center">
-                    <Carousel interval={3000} speed={500}>
+                    <Carousel>
                         {companyData.map((src, i) => ( <img key={i} src={src} className="w-auto h-10"/>))}
                     </Carousel>
                 </div>
@@ -238,7 +239,16 @@ export default function Join() {
                 />
             </div>
 
-            <div className="h-100" bg-white />
+            {/*-------------- Ending Section --------------*/}
+            <div className="flex w-full h-60 mx-auto gap-20 justify-center items-center">
+                <h1 className="font-bold text-[1.7rem]">
+                    A home for everyone
+                    </h1>
+                <p className="w-180 font-bold text-[1.1rem]">
+                    At CalTV, there’s a role for every interest. Whether you are interested in Journalism, 
+                    Video Production, Marketing, Social Media, or analytics, we have a place for you.
+                </p>
+            </div>
 
             <Footer />
         </div>

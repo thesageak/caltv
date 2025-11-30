@@ -6,12 +6,11 @@ import useMeasure from "react-use-measure"
 
 interface CarouselProps {
     children: React.ReactNode[];
-    interval?: number;
-    speed?: number;
+    duration?: number;
 }
 
 
-export default function Carousel({ children, interval, speed }: CarouselProps) {
+export default function Carousel({ children, duration = 20 }: CarouselProps) {
     const [index, setIndex] = useState(0);
 
     let [ref, { width }] = useMeasure();
@@ -25,7 +24,7 @@ export default function Carousel({ children, interval, speed }: CarouselProps) {
 
         controls = animate(xTranslation, [0, finalPosition], {
             ease: 'linear',
-            duration: 20,
+            duration: duration,
             repeat: Infinity,
             repeatType: 'loop',
             repeatDelay: 0,
