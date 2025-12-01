@@ -1,9 +1,13 @@
+"use client";
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import colorBarAsset from "@/public/ColorBarAsset.svg"
 import asucLogo from '@/public/ASUCLogoWhite.png'
 import LeadershipCards from "@/components/LeadershipCards"
 import { leadershipData } from "@/app/section/about/data"
+import PopIn from "@/components/PopIn"
+import CountUp from "@/components/CountUp"
+import { motion } from "framer-motion"
 
 
 export default function About() {
@@ -39,8 +43,16 @@ export default function About() {
                 className="w-full h-6 object-cover"
             />
             <div className="w-full h-140 flex justify-center bg-black mb-20">
-                <div className="w-[1100px] grid grid-cols-3 grid-rows-2 place-items-center mt-10 mb-10">
-                    <div className="flex flex-col items-center">
+                <motion.div 
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true}}
+                    variants={{
+                        visible: { transition: { staggerChildren: 0.3 } }
+                    }}
+                    className="w-[1100px] grid grid-cols-3 grid-rows-2 grid-flow-col place-items-center mt-10 mb-10"
+                >
+                    <PopIn className="flex flex-col items-center">
                         <img
                             src={asucLogo.src}
                             className="w-100 h-auto"
@@ -48,53 +60,45 @@ export default function About() {
                         <p>
                             Chartered Program
                         </p>
-                    </div>
+                    </PopIn>
 
-                    <div className="flex flex-col items-center">
-                        <p className="text-white text-6xl font-bold">
-                            3,632,000+
+                    <PopIn className="flex flex-col items-center">
+                        <CountUp value={567000} className="text-white text-6xl font-bold" />
+                        <p>
+                            Facebook Views & Counting
                         </p>
+                    </PopIn>
+
+                    <PopIn className="flex flex-col items-center">
+                        <CountUp value={3632000} className="font-bold text-white text-6xl" />
                         <p className="translate-y-10">
                             Youtube Views & Counting
                         </p>
-                    </div>
+                    </PopIn>
 
-                    <div className="flex flex-col items-center">
+                    <PopIn className="flex flex-col items-center">
+                        <CountUp value={2296000} className="text-white text-6xl font-bold" />
+                        <p>
+                            TikTok Views & Counting
+                        </p>
+                    </PopIn>
+
+                    <PopIn className="flex flex-col items-center">
                         <p className="text-white text-9xl font-bold">
                             MMV
                         </p>
                         <p>
                             Since 2005
                         </p>
-                    </div>
+                    </PopIn>
 
-                    <div className="flex flex-col items-center">
-                        <p className="text-white text-6xl font-bold">
-                            567,000+
-                        </p>
-                        <p>
-                            Facebook Views & Counting
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col items-center">
-                        <p className="text-white text-6xl font-bold">
-                            2,296,000+
-                        </p>
-                        <p>
-                            TikTok Views & Counting
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col items-center ">
-                        <p className="text-white text-6xl font-bold">
-                            416,000+
-                        </p>
+                    <PopIn className="flex flex-col items-center">
+                        <CountUp value={416000} duration={2} className="text-white text-6xl font-bold" />
                         <p>
                             Instagram Views & Counting
                         </p>
-                    </div>
-                </div>
+                    </PopIn>
+                </motion.div>
             </div>
 
             <h1 className="text-center text-4xl font-bold mb-20">

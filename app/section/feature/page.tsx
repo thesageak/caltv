@@ -6,7 +6,7 @@ export default function Feature() {
     return (
         <div>
             <Navbar barColor="bg-darkGrey" />
-            <div className="w-[1100px] mx-auto mt-25 flex flex-row gap-65">
+            <div className="w-[1100px] mx-auto mt-25 flex flex-row gap-50">
                 <form action="#" method="POST" className="flex flex-col gap-5">
                     <div className="flex flex-row gap-3">
                         <div className="flex flex-col">
